@@ -1,0 +1,177 @@
+/* Reset default margin dan padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body dan font dasar */
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #FEF3E2;
+    color: #333;
+    animation: fadeIn 1s ease-out forwards;
+  }
+  
+  /* Header */
+  header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  header .logo img {
+    width: 150px;
+    height: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #cbe5f0;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-color: rgb(58, 146, 161);
+    background-image: url("https://i.pinimg.com/736x/ce/57/d0/ce57d0785b6fa0a8ebb675d6f62563c2.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 75px 35px;
+  }
+  
+  .hero h1 {
+    font-size: 4rem;
+    font-family: "EB Garamond", serif;
+    text-shadow: 3px 2px black;
+  }
+  
+  .hero p {
+    font-size: 2rem;
+    font-family: "EB Garamond", serif;
+    text-shadow: 3px 2px black;
+  }
+  
+  /* Main Content */
+  .content {
+    display: flex;
+    justify-content: space-around;
+    padding: px;
+  }
+  
+  .content article {
+    background-color: #aad9f9;
+    border-radius: 8px;
+    box-shadow: 2px 5px rgb(126, 147, 163);
+    padding: 20px;
+    width: 45%;
+  }
+  
+  .content article h2 {
+    margin-bottom: 10px;
+  }
+  
+  .content article p {
+    margin-bottom: 10px;
+  }
+  
+  .content article a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  /* Responsif */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .content article {
+      width: 80%;
+      margin-bottom: 20px;
+      background-color: rgba(157, 207, 222, 0.765)
+    }
+
+    .hero h1 {
+      font-size: 50px
+    }
+
+    .body {
+      width: 50%;
+      justify-content: center;
+    }
+  }
+  
+/*Secton Sejarah*/
+
+
+.wrapper {
+  width: 1275px;
+  justify-content: center; /* Tengah-kan horizontal */
+  display: flex;
+  flex-wrap: wrap; /* Biar responsif saat sempit */
+  margin: 75px;
+  gap: 75px; /* Jarak antar polaroid */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+
+div.polaroid {
+  width: 300px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 50; /* Hapus margin besar agar tidak bertumpuk */
+  text-align: center;
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 15px;
+  padding: 20px
+}
+
+.polaroid:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+
+/* animasi*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Bisa dihapus jika tak ingin gerakan vertikal */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
